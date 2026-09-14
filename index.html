@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matriz de referencia normativa BCRA — Ciberseguridad, fraude, PSP y servicios financieros digitales</title>
+<meta name="description" content="Comunicaciones, Textos Ordenados y referencias regulatorias del BCRA sobre ciberseguridad, fraude digital, PSP/PSPCP, billeteras digitales y servicios financieros digitales. Verificada al 01/09/2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0d2b4e;
+  --navy-deep: #081d36;
+  --ink: #25304a;
+  --ink-soft: #5a6781;
+  --paper: #f5f7fb;
+  --card: #ffffff;
+  --line: #dde3f0;
+  --line-soft: #ebeff8;
+  --gold: #d9a521;
+  --zebra: #f4f7fd;
+  --hover: #ecf2fe;
+  --c1: #3949ab; --c2: #00897b; --c3: #2e7d32; --c4: #c62828; --c5: #d84315; --c6: #6a1b9a; --c7: #1565c0;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'IBM Plex Sans', 'Segoe UI', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+body > div { max-width: 1480px; margin-left: auto; margin-right: auto; }
+
+/* ───────── HEADER ───────── */
+.header {
+  background: var(--navy-deep);
+  color: #fff;
+  padding: 34px 36px 26px;
+  border-bottom: 4px solid var(--gold);
+  max-width: none;
+}
+.header > * { max-width: 1480px; margin-left: auto; margin-right: auto; }
+.header h1 {
+  font-family: 'Archivo', sans-serif;
+  font-size: clamp(19px, 2.4vw, 26px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+  max-width: none;
+}
+.header .sub { font-size: 14px; opacity: 0.85; margin-bottom: 8px; font-weight: 400; }
+.header .header-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.88);
+}
+.header .header-author .by-label { opacity: 0.78; }
+.header .header-author a {
+  color: #fff;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.header .header-author a:hover { text-decoration: underline; }
+.header .header-author .li-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 19px;
+  height: 19px;
+  background: #0a66c2;
+  color: #fff;
+  border-radius: 4px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1;
+}
+.header .chips { display: flex; flex-wrap: wrap; gap: 8px; font-size: 11.5px; }
+.header .chips span {
+  background: rgba(255,255,255,0.08);
+  padding: 5px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.18);
+  line-height: 1.45;
+}
+.header .chips span.new { background: var(--gold); color: #1d1500; font-weight: 600; border-color: var(--gold); }
+
+/* ───────── ALERTS ───────── */
+.alert {
+  margin: 18px 24px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.65;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left-width: 4px;
+}
+.alert-methodology { border-left-color: var(--c7); }
+.alert-new { border-left-color: var(--gold); }
+a.intext { color: var(--c7); font-weight: 600; }
+
+/* ───────── TOC ───────── */
+.toc-wrap {
+  margin: 18px 24px;
+  background: var(--card);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  padding: 18px 22px;
+}
+.toc-wrap h2 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  color: var(--navy);
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.toc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 28px; }
+.toc-grid a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+  padding: 6px 4px 6px 16px;
+  display: block;
+  position: relative;
+  border-radius: 4px;
+}
+.toc-grid a::before {
+  content: '';
+  position: absolute;
+  left: 2px; top: 50%;
+  transform: translateY(-50%);
+  width: 7px; height: 7px;
+  border-radius: 2px;
+  background: var(--ink-soft);
+}
+.toc-grid a:nth-child(1)::before { background: var(--c1); }
+.toc-grid a:nth-child(2)::before { background: var(--c2); }
+.toc-grid a:nth-child(3)::before { background: var(--c3); }
+.toc-grid a:nth-child(4)::before { background: var(--c4); }
+.toc-grid a:nth-child(5)::before { background: var(--c5); }
+.toc-grid a:nth-child(6)::before { background: var(--c6); }
+.toc-grid a:nth-child(7)::before { background: var(--c7); }
+.toc-grid a:hover { background: var(--hover); color: var(--navy); }
+
+/* ───────── SECTIONS ───────── */
+.section {
+  margin: 26px 24px;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(13,43,78,0.05);
+}
+.section-hdr {
+  padding: 16px 20px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #fbfcfe;
+  border-bottom: 1px solid var(--line);
+  border-left: 5px solid var(--ink-soft);
+}
+.c1 .section-hdr { border-left-color: var(--c1); }
+.c2 .section-hdr { border-left-color: var(--c2); }
+.c3 .section-hdr { border-left-color: var(--c3); }
+.c4 .section-hdr { border-left-color: var(--c4); }
+.c5 .section-hdr { border-left-color: var(--c5); }
+.c6 .section-hdr { border-left-color: var(--c6); }
+.c7 .section-hdr { border-left-color: var(--c7); }
+.section-hdr .num {
+  font-family: 'Archivo', sans-serif;
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  background: var(--ink-soft);
+}
+.c1 .num { background: var(--c1); } .c2 .num { background: var(--c2); }
+.c3 .num { background: var(--c3); } .c4 .num { background: var(--c4); }
+.c5 .num { background: var(--c5); } .c6 .num { background: var(--c6); }
+.c7 .num { background: var(--c7); }
+.section-hdr h2 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0;
+  line-height: 1.3;
+}
+.section-hdr p { font-size: 12.5px; color: var(--ink-soft); margin-top: 3px; }
+
+/* ───────── TABLES ───────── */
+.tbl-wrap { overflow-x: auto; position: relative; }
+.tbl-wrap::after {
+  content: '↔ deslizá horizontalmente para ver todas las columnas';
+  display: none;
+  font-size: 10.5px;
+  color: var(--ink-soft);
+  padding: 6px 16px 10px;
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 12.5px;
+  min-width: 1340px;
+}
+thead th {
+  padding: 10px 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  background: #f0f3fa;
+  border-bottom: 2px solid var(--line);
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+td {
+  padding: 11px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--card);
+  line-height: 1.55;
+}
+tbody tr:nth-child(even) td { background: var(--zebra); }
+tbody tr:hover td { background: var(--hover); }
+tbody tr:last-child td { border-bottom: none; }
+
+/* Sticky first columns: norm always visible while scrolling */
+td.w-n, thead th.w-n { position: sticky; left: 0; z-index: 1; }
+td.w-norma, thead th.w-norma {
+  position: sticky; left: 38px; z-index: 1;
+  box-shadow: 8px 0 10px -8px rgba(13,43,78,0.22);
+}
+thead th.w-n, thead th.w-norma { z-index: 3; }
+
+.w-n { width: 38px; min-width: 38px; max-width: 38px; padding-left: 5px; padding-right: 5px; text-align: center; font-weight: 600; color: var(--ink-soft); font-size: 11px; }
+.w-norma { width: 142px; min-width: 142px; }
+.w-norma strong { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; color: var(--navy); letter-spacing: -0.02em; }
+.w-tipo { width: 96px; min-width: 96px; }
+.w-fecha { width: 118px; min-width: 118px; }
+.w-fecha, .w-fecha em { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: -0.02em; }
+.w-fecha em { font-style: normal; display: block; margin-top: 4px; color: var(--ink-soft); font-size: 10px; line-height: 1.5; }
+.w-to { width: 160px; min-width: 160px; color: var(--ink); }
+.w-tema { width: 260px; min-width: 250px; }
+.w-rel { width: 250px; min-width: 240px; color: #45506b; }
+.w-suj { width: 120px; min-width: 110px; }
+.w-niv { width: 88px; min-width: 88px; }
+.w-est { width: 120px; min-width: 112px; }
+.w-mod { width: 140px; min-width: 130px; font-size: 11.5px; color: var(--ink-soft); }
+.w-link { width: 62px; min-width: 62px; text-align: center; }
+
+/* ───────── BADGES ───────── */
+.b {
+  display: inline-block;
+  padding: 2.5px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 1.5;
+  margin: 1.5px 0;
+  letter-spacing: 0.01em;
+}
+.t-com  { background: #e7f0fc; color: #0d47a1; border: 1px solid #b6d2f3; }
+.t-to   { background: #f3eafa; color: #4a148c; border: 1px solid #ddc4ee; }
+.t-sec  { background: #ece7f8; color: #311b92; border: 1px solid #cabfeb; }
+.t-comp { background: #e2f3f1; color: #00695c; border: 1px solid #aedcd5; }
+.n-tronc { background: var(--navy); color: #fff; border: 1px solid var(--navy); }
+.n-rel   { background: #e9ecf8; color: #303f9f; border: 1px solid #c2cae9; }
+.n-comp  { background: #f1f7e8; color: #33691e; border: 1px solid #cde3ae; }
+.n-oper  { background: #f4f5f7; color: #5f6776; border: 1px solid #d6dae2; }
+.e-ver   { background: #e7f4e9; color: #1b5e20; border: 1px solid #aedbb4; }
+.e-vera  { background: #e2f5f8; color: #00606b; border: 1px solid #a8dde6; }
+.e-pend  { background: #fdf1e2; color: #b35a00; border: 1px solid #f3cf9b; }
+.e-int   { background: #ece7f8; color: #4527a0; border: 1px solid #cabfeb; }
+.e-pto   { background: #fbe8ef; color: #a91e54; border: 1px solid #f1b8cd; }
+.e-tovig { background: #0d2b4e; color: #fff; border: 1px solid #0d2b4e; }
+.b-new   { background: var(--gold); color: #241a00; border: 1px solid #b8890f; font-weight: 700; }
+
+.ef  { color: #1565c0; font-weight: 600; }
+.psp { color: #2e7d32; font-weight: 600; }
+.amb { color: #6a1b9a; font-weight: 600; }
+.imf { color: #c62828; font-weight: 600; }
+
+a.lnk {
+  color: var(--c7);
+  text-decoration: none;
+  font-size: 10.5px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 3px 8px;
+  background: #eaf1fd;
+  border-radius: 5px;
+  border: 1px solid #c4d7f5;
+  white-space: nowrap;
+  margin: 2px 0;
+  transition: background 0.12s ease;
+}
+a.lnk:hover { background: #d8e6fb; }
+
+.ed-note {
+  font-size: 10.5px;
+  color: #7b5ba6;
+  font-style: italic;
+  display: block;
+  margin-top: 5px;
+  line-height: 1.5;
+  border-left: 2px solid #d9c9ee;
+  padding-left: 7px;
+}
+
+/* ───────── SUMMARY CARDS ───────── */
+.summary { margin: 30px 24px; }
+.summary h2 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--line);
+}
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 3px rgba(13,43,78,0.04);
+}
+.card h3 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+  padding-bottom: 8px;
+  line-height: 1.35;
+}
+.card h3::after { content: ''; display: block; width: 34px; height: 3px; background: var(--gold); border-radius: 2px; margin-top: 8px; }
+.card ul, .card ol { padding-left: 18px; margin-top: 8px; }
+.card li { font-size: 12.5px; margin: 6px 0; color: var(--ink); line-height: 1.55; }
+.card li strong { color: var(--navy); }
+.card .note { font-size: 11.5px; color: var(--ink-soft); margin-top: 10px; font-style: italic; line-height: 1.55; }
+
+/* ───────── TO SECTION ───────── */
+.to-section {
+  margin: 26px 24px;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(13,43,78,0.05);
+}
+.to-section .hdr { background: var(--navy); color: #fff; padding: 15px 20px; }
+.to-section .hdr h2 { font-family: 'Archivo', sans-serif; font-size: 15.5px; font-weight: 700; }
+.to-section .hdr p { font-size: 12px; opacity: 0.8; margin-top: 3px; line-height: 1.5; }
+.to-section table { min-width: 980px; }
+.to-section thead th { background: #eef1f9; }
+.to-section td:first-child { font-family: 'Archivo', sans-serif; font-weight: 700; color: var(--navy); }
+
+/* ───────── FOOTER ───────── */
+.footer {
+  margin: 26px 24px 40px;
+  padding: 20px 22px;
+  background: var(--card);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+.footer strong { color: var(--navy); }
+.footer a { color: var(--c7); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 14px; align-items: center; }
+.legend strong { font-size: 12px; }
+.disclaimer {
+  margin-top: 16px;
+  padding: 13px 16px;
+  background: #fdf8ec;
+  border-left: 4px solid var(--gold);
+  border-radius: 6px;
+  color: #5d4a1e;
+  line-height: 1.65;
+}
+.authorship {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.authorship .by { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+.authorship .by-label { color: var(--ink-soft); }
+.authorship .by a {
+  color: var(--navy);
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.authorship .by a:hover { color: var(--c7); text-decoration: underline; }
+.authorship .by .li-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px; height: 20px;
+  background: #0a66c2;
+  color: #fff;
+  border-radius: 4px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1;
+}
+.authorship .logo-slot {
+  min-width: 150px;
+  height: 52px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-size: 11px;
+  text-align: center;
+  padding: 6px 14px;
+}
+.authorship .logo-slot img { max-height: 44px; max-width: 220px; object-fit: contain; }
+@media (max-width: 640px) {
+  .authorship { flex-direction: column; align-items: flex-start; }
+}
+
+/* ───────── RESPONSIVE & A11Y ───────── */
+a:focus-visible { outline: 2px solid var(--c7); outline-offset: 2px; border-radius: 3px; }
+@media (max-width: 900px) {
+  .toc-grid { grid-template-columns: 1fr; }
+  .card-grid { grid-template-columns: 1fr; }
+  .header { padding: 24px 18px 20px; }
+  .alert, .toc-wrap, .section, .summary, .to-section, .footer { margin-left: 12px; margin-right: 12px; }
+  .tbl-wrap::after { display: block; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+@media print {
+  body { background: #fff; font-size: 11px; }
+  .tbl-wrap { overflow: visible; }
+  table { min-width: 0; font-size: 8.5px; }
+  td.w-n, td.w-norma, thead th { position: static; box-shadow: none; }
+  .section, .to-section, .card, .footer { box-shadow: none; break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>📋 Matriz de referencia normativa BCRA sobre ciberseguridad, fraude, PSP y servicios financieros digitales</h1>
+  <div class="sub">Comunicaciones, Textos Ordenados y referencias regulatorias vigentes verificadas al 01/09/2026.</div>
+  <div class="header-author">
+    <span class="by-label">Por:</span>
+    <a href="https://www.linkedin.com/in/bernarditagotte/" target="_blank" rel="noopener">
+      <span class="li-icon">in</span>Bernardita Götte
+    </a>
+  </div>
+  <div class="chips">
+    <span>🏛 Fuentes: BCRA · Boletín Oficial · Infoleg</span>
+    <span>✅ Incluye normas y TO vigentes o con efectos vigentes al momento de la revisión. La vigencia debe verificarse al momento de uso</span>
+    <span class="new">🆕 Actualizada al 01/09/2026 — incorpora A 8406, A 8411, A 8415, A 8454, A 8457 y A 8471</span>
+  </div>
+</div>
+
+<!-- ALERTS -->
+<div class="alert alert-new">
+  🆕 <strong>NOVEDADES CLAVE 2025–2026 incluidas en esta versión:</strong>
+  Com. A 8398 (05/02/2026) — incorpora a los PSP registrados como sujetos obligados del TO de Requisitos Mínimos TI/SI; el plazo transitorio de 180 días corridos <strong>venció el 04/08/2026</strong>, por lo que el TO ya les resulta exigible |
+  Com. A 8401 (13/02/2026) — nueva versión del TO TI/SI (t-rmgcti.pdf) |
+  Com. A 8280 (17/07/2025) — notificación obligatoria de ciberincidentes al BCRA |
+  Com. A 8249 (02/06/2025, vigente desde 01/09/2025) — Resiliencia Operacional en el TO de Lineamientos para la Gestión de Riesgos en EF |
+  Com. A 8432 (30/04/2026) — figura "PSPCP como Servicio".
+</div>
+
+<div class="alert alert-new">
+  🆕 <strong>INCORPORADO EN LA REVISIÓN DEL 01/09/2026:</strong>
+  Com. A 8471 (27/08/2026, BO 01/09/2026) — <strong>gestión del riesgo de fraude</strong>: dispone incorporar un nuevo punto 6.5 al TO de Lineamientos para la Gestión de Riesgos (modificaciones para EF vigentes desde el 01/12/2026), con estrategia, políticas y responsable antifraude, apetito y tolerancia al riesgo y reporte trimestral al Directorio. Los PSPCP quedan alcanzados por la Sección 6 completa según un cronograma que arranca el 01/09/2026 y culmina con vigencia plena el 01/09/2027; los demás PSP, desde el 01/01/2027 |
+  Com. A 8411 (20/03/2026) y Com. A 8415 (27/03/2026) — el Régimen Disciplinario del BCRA incorpora a los PSP y a las IMF sistémicas al "Grupo A" y actualiza el catálogo de infracciones, con un bloque específico de incumplimientos de tecnología, seguridad de la información, ciberincidentes, continuidad y servicios financieros digitales |
+  Com. A 8406 (02/03/2026) — "Cobro con Transferencia" (CCT): consentimiento explícito bajo estándar oAuth2, notificación previa, límites de reintentos y responsabilidad ante el fraude en cabeza del cliente ordenante; <strong>disponible desde el 31/08/2026</strong> |
+  Com. A 8454 (14/07/2026) — nueva versión del TO de PSP (t-snp-psp.pdf), que ya incorpora la A 8432 |
+  Com. A 8457 (21/07/2026) — actualización de los Principios para las Infraestructuras del Mercado Financiero, ya incorporada al TO PIMF vigente.
+</div>
+
+<div class="alert alert-methodology">
+  ℹ️ <strong>METODOLOGÍA:</strong> La matriz fue elaborada a partir de Textos Ordenados del BCRA, Comunicaciones oficiales, Boletín Oficial e Infoleg. Las referencias marcadas como <span class="b e-pend">Pendiente de validación</span> o <span class="b e-pto">Pendiente de incorporación al TO</span> deben verificarse directamente en el
+  <a class="intext" href="https://www.bcra.gob.ar/buscador-de-comunicaciones/" target="_blank">buscador oficial del BCRA ↗</a> antes de su uso formal.
+  Las columnas <strong>"Tema normativo"</strong> y <strong>"Sujetos alcanzados"</strong> resumen el contenido regulatorio; la columna <strong>"Relación con ciberseguridad / fraude"</strong> contiene <em>interpretación técnica editorial</em> sobre el impacto práctico, y no reproduce denominaciones oficiales del BCRA. Las etiquetas "Troncal", "Relevante", "Complementaria" y "Operativa" son una <em>clasificación editorial</em> propia, no una categoría normativa del BCRA.
+</div>
+
+<!-- TOC -->
+<div class="toc-wrap">
+  <h2>📑 Índice</h2>
+  <div class="toc-grid">
+    <a href="#cat1">1. Riesgos de tecnología y seguridad de la información (TI/SI)</a>
+    <a href="#cat2">2. Servicios financieros digitales (SFD)</a>
+    <a href="#cat3">3. PSP, billeteras digitales, pagos y fraude</a>
+    <a href="#cat4">4. Ciberincidentes y RRCI</a>
+    <a href="#cat5">5. Continuidad, resiliencia operacional y terceros</a>
+    <a href="#tos">Textos Ordenados — referencia directa</a>
+    <a href="#analisis">Análisis: troncales, aplicabilidad y prioridad</a>
+  </div>
+</div>
+
+
+<!-- ══════════════ CAT 1 ══════════════ -->
+<div class="section c1" id="cat1">
+  <div class="section-hdr">
+    <div class="num">1</div>
+    <div>
+      <h2>🔐 Riesgos de tecnología y seguridad de la información (TI/SI)</h2>
+      <p>Marco regulatorio base: gobierno, gestión de riesgos, infraestructura, activos de información, continuidad, terceros y ciberincidentes</p>
+    </div>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th scope="col" class="w-n">N°</th><th scope="col" class="w-norma">Norma</th><th scope="col" class="w-tipo">Tipo de referencia</th><th scope="col" class="w-fecha">Fecha</th>
+      <th scope="col" class="w-to">TO afectado</th><th scope="col" class="w-tema">Tema normativo</th>
+      <th scope="col" class="w-rel">Relación con ciberseguridad / fraude (interpretación editorial)</th>
+      <th scope="col" class="w-suj">Sujetos alcanzados</th>
+      <th scope="col" class="w-niv">Nivel de relevancia</th><th scope="col" class="w-est">Estado de validación</th>
+      <th scope="col" class="w-mod">Modifica / complementa</th><th scope="col" class="w-link">Link oficial</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="w-n">1</td>
+        <td class="w-norma"><strong>Com. "A" 7724</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">10/03/2023<br><em>Vigencia: 06/09/2023 (180 días corridos desde su difusión)</em></td>
+        <td class="w-to">TO "Requisitos mínimos para la gestión y control de los riesgos de tecnología y seguridad de la información"</td>
+        <td class="w-tema">Establece el marco integral de gestión y control de riesgos TI/SI: gobierno (responsabilidades del Directorio), gestión de riesgos, activos de información, infraestructura, continuidad del negocio, terceras partes, uso de IA y gestión de ciberincidentes. Deroga la Com. A 4609</td>
+        <td class="w-rel">Es la base regulatoria de ciberseguridad para EF: introduce las 3 líneas de defensa, gestión de vulnerabilidades, clasificación de información y responsabilidad del máximo nivel jerárquico sobre la seguridad. Punto de partida obligado de cualquier análisis de cumplimiento</td>
+        <td class="w-suj"><span class="ef">EF</span><br><em>PSP incorporados luego por A 8398</em></td>
+        <td class="w-niv"><span class="b n-tronc">Troncal</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span></td>
+        <td class="w-mod">Reemplaza A 4609. Sec. 11 reemplazada por A 7783; Sec. 10 reemplazada por A 8398</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A7724.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">2</td>
+        <td class="w-norma"><strong>Com. "A" 7777</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span><br><span class="b t-to">Circular de TO</span></td>
+        <td class="w-fecha">01/06/2023</td>
+        <td class="w-to">TO "Req. mínimos TI/SI" (hojas de reemplazo)</td>
+        <td class="w-tema">Circula las hojas actualizadas del Texto Ordenado derivado de la Com. A 7724</td>
+        <td class="w-rel">Referencia de trabajo para auditores y áreas de compliance: consolida el texto aplicable</td>
+        <td class="w-suj"><span class="ef">EF</span></td>
+        <td class="w-niv"><span class="b n-oper">Operativa</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span></td>
+        <td class="w-mod">Circulación del TO de A 7724</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A7777.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">3</td>
+        <td class="w-norma"><strong>Com. "A" 8398</strong> <span class="b b-new">2026</span></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">05/02/2026<br><em>BO: 09/02/2026</em><br><em>Plazo PSP: 180 días corridos — <strong>vencido el 04/08/2026</strong></em></td>
+        <td class="w-to">TO "Req. mínimos TI/SI" — punto 1.1 (sujetos) y Sección 10 (terceras partes)</td>
+        <td class="w-tema">Incorpora a los PSP incluidos en el Registro de PSP del BCRA como sujetos obligados del TO TI/SI, con plazo transitorio de 180 días corridos para su implementación. Sustituye íntegramente la Sección 10 (gestión de la relación con terceras partes). Reemplaza PRISMA por NEWPAY en el punto 1.1. Prohíbe tercerizar funciones de auditoría interna y/o externa</td>
+        <td class="w-rel">Cambio estructural para el ecosistema fintech: los PSP quedan alcanzados por el mismo cuerpo normativo TI/SI, dentro del régimen y plazos transitorios que la norma establece. La nueva Sec. 10 exige evaluaciones de riesgo documentadas, auditorías internas sobre tercerizados, notificación de subcontratistas y habilita al BCRA a auditar proveedores, incluso en el exterior, a costo de la entidad</td>
+        <td class="w-suj"><span class="amb">EF + PSP registrados</span><br><em>PSP: plenamente exigible desde el 04/08/2026</em></td>
+        <td class="w-niv"><span class="b n-tronc">Troncal</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Actualizado al 01/09/2026: el plazo transitorio de 180 días corridos para PSP venció el 04/08/2026. La norma también sustituye la Sección 2 del TO sobre "Expansión de Entidades Financieras" (tercerización)</span></td>
+        <td class="w-mod">Modifica punto 1.1, Sec. 10 y Sec. 11 (glosario) del TO de A 7724. Sustituye la Sec. 2 del TO "Expansión de EF"</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8398.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">4</td>
+        <td class="w-norma"><strong>Com. "A" 8401</strong> <span class="b b-new">2026</span></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span><br><span class="b t-to">Circular de TO</span></td>
+        <td class="w-fecha">13/02/2026</td>
+        <td class="w-to">TO "Req. mínimos TI/SI" — versión consolidada (t-rmgcti.pdf) + TO "Expansión de EF"</td>
+        <td class="w-tema">Circula la versión consolidada del TO TI/SI incorporando las disposiciones de A 8398: glosario actualizado (Shadow IT, tercera parte, tolerancia al riesgo, vulnerabilidad), nueva Sec. 10 y Sec. 12 de disposiciones transitorias con los plazos para PSP</td>
+        <td class="w-rel">Texto de referencia vigente para auditorías TI/SI. La Sec. 12 (disposiciones transitorias) es el documento donde verificar los plazos de implementación aplicables a PSP</td>
+        <td class="w-suj"><span class="amb">EF + PSP registrados</span></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span> <span class="b e-tovig">TO vigente</span><span class="ed-note">Última comunicación incorporada al TO TI/SI (texto consolidado en uso, TO al 13/02/2026)</span></td>
+        <td class="w-mod">Circula el TO TI/SI vigente (A 7724 + A 8398)</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8401.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-rmgcti.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">5</td>
+        <td class="w-norma"><strong>Com. "A" 8411</strong> <span class="b b-new">2026</span></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">20/03/2026<br><em>BO: 30/03/2026</em></td>
+        <td class="w-to">TO "Régimen Disciplinario a cargo del BCRA (Leyes 21.526 y 25.065) y Tramitación de Sumarios Cambiarios" (t-rdbcra.pdf). También alcanza normas del SNP y del TO PSP</td>
+        <td class="w-tema">Amplía el alcance subjetivo del régimen sancionatorio: incorpora a los proveedores de servicios de pago sujetos a registración y a las infraestructuras del mercado financiero de importancia sistémica dentro del "Grupo A". Actualiza la Sección 11 (catálogo de infracciones), modificando cuantías y niveles de gravedad e incorporando nuevos supuestos sancionables, entre ellos un bloque referido a gobierno y gestión de tecnología, seguridad de la información, gestión de ciberincidentes, continuidad del negocio, relación con terceras partes y prestación de servicios financieros digitales (p. ej. puntos 11.15 y 11.19.1)</td>
+        <td class="w-rel">Cierra el circuito de exigibilidad del marco TI/SI: los requisitos de los TO de Requisitos Mínimos TI/SI y de SFD pasan a tener una consecuencia sancionatoria tipificada y cuantificada en Unidades Sancionatorias, ahora también aplicable a PSP. Debe leerse en conjunto con la A 8398 al planificar el cumplimiento y al dimensionar el riesgo regulatorio de los hallazgos de auditoría</td>
+        <td class="w-suj"><span class="amb">EF, PSP / PSPCP / PSI, IMF sistémicas, CEC, redes de cajeros y de transferencias, administradores de esquemas, aceptadores, adquirentes, agregadores, operadores de cambio, emisoras no financieras de TC/compra, OPNFC y empresas de cobranza extrabancaria</span></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Sanción 20/03/2026, BO 30/03/2026. Consolidada en el TO por la Com. A 8415. El detalle de infracciones y gravedades debe leerse en la Sección 11 del TO vigente</span></td>
+        <td class="w-mod">Modifica el TO de Régimen Disciplinario (base: A 6167). Instrumentada en el TO por A 8415</td>
+        <td class="w-link"><a class="lnk" href="https://www.boletinoficial.gob.ar/detalleAviso/primera/340128/20260330" target="_blank">BO ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-rdbcra.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">6</td>
+        <td class="w-norma"><strong>Com. "A" 8415</strong> <span class="b b-new">2026</span></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span><br><span class="b t-to">Circular de TO</span></td>
+        <td class="w-fecha">27/03/2026<br><em>Circular RUNOR 1-1953</em></td>
+        <td class="w-to">TO "Régimen Disciplinario a cargo del BCRA" (t-rdbcra.pdf) — hojas de reemplazo</td>
+        <td class="w-tema">Circula las hojas que incorporan al TO las disposiciones de la Com. A 8411 (puntos 1 a 8), incluida la tabla de Unidades Sancionatorias aplicables a cada infracción según el grupo de entidad o sujeto alcanzado por la potestad sancionatoria del BCRA</td>
+        <td class="w-rel">Es el texto de trabajo para estimar la exposición sancionatoria asociada a incumplimientos de ciberseguridad y servicios financieros digitales. Referencia práctica para áreas de compliance y auditoría interna</td>
+        <td class="w-suj"><span class="amb">Mismos sujetos alcanzados por la A 8411</span></td>
+        <td class="w-niv"><span class="b n-oper">Operativa</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span> <span class="b e-tovig">TO vigente</span><span class="ed-note">Última comunicación incorporada al TO de Régimen Disciplinario (texto consolidado en uso, TO al 27/03/2026), verificado en el encabezado del PDF oficial</span></td>
+        <td class="w-mod">Circula el TO de Régimen Disciplinario con las disposiciones de A 8411</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8415.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-rdbcra.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+<!-- ══════════════ CAT 2 ══════════════ -->
+<div class="section c2" id="cat2">
+  <div class="section-hdr">
+    <div class="num">2</div>
+    <div>
+      <h2>📱 Servicios financieros digitales (SFD) — Autenticación, onboarding y monitoreo</h2>
+      <p>Riesgos específicos de los canales digitales: identificación, autenticación, onboarding no presencial, monitoreo transaccional y prevención de fraude digital</p>
+    </div>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th scope="col" class="w-n">N°</th><th scope="col" class="w-norma">Norma</th><th scope="col" class="w-tipo">Tipo de referencia</th><th scope="col" class="w-fecha">Fecha</th>
+      <th scope="col" class="w-to">TO afectado</th><th scope="col" class="w-tema">Tema normativo</th>
+      <th scope="col" class="w-rel">Relación con ciberseguridad / fraude (interpretación editorial)</th>
+      <th scope="col" class="w-suj">Sujetos alcanzados</th>
+      <th scope="col" class="w-niv">Nivel de relevancia</th><th scope="col" class="w-est">Estado de validación</th>
+      <th scope="col" class="w-mod">Modifica / complementa</th><th scope="col" class="w-link">Link oficial</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="w-n">7</td>
+        <td class="w-norma"><strong>Com. "A" 7783</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">02/06/2023<br><em>Vigencia: 29/11/2023 (180 días corridos desde su difusión)</em></td>
+        <td class="w-to">TO "Requisitos mínimos para la gestión y control de los riesgos de TI y SI asociados a los servicios financieros digitales" (t-rmrtsd.pdf) + TO general TI/SI (ampliación de sujetos)</td>
+        <td class="w-tema">Aprueba el TO de SFD: gestión de riesgos en servicios digitales (Sec. 2), protección de los servicios provistos por medios digitales (Sec. 3: autenticación, PIN mínimo de 6 dígitos, cifrado de canal, tarjetas y tokens físicos), detección y monitoreo (Sec. 4) y glosario (Sec. 5). Reemplaza la Sec. 11 (canales electrónicos) del TO general TI/SI y deja sin efecto las normas sobre "Requisitos operativos mínimos del área de sistemas de información (SI) – tecnología informática".<br><br><strong>Alcance:</strong> el TO de SFD aplica a entidades financieras y PSP. Adicionalmente, la A 7783 extiende el alcance del TO general de riesgos TI/SI a las IMF conocidas como Sistemas de Pago de importancia sistémica: INTERBANKING, COELSA, LINK y PRISMA (luego NEWPAY por A 8398)</td>
+        <td class="w-rel">Norma de referencia para todo lo relativo a onboarding digital, autenticación multifactor, agenda de cuentas para transferencias, gestión de dispositivos/apps y monitoreo de actividades sospechosas en canales digitales. Junto con A 7724 conforma el núcleo del marco de ciberseguridad financiero argentino</td>
+        <td class="w-suj"><strong>TO SFD:</strong> <span class="amb">EF + PSP</span><br><strong>TO TI/SI general:</strong> ampliado a <span class="imf">IMF sistémicas (INTERBANKING, COELSA, LINK, PRISMA→NEWPAY)</span></td>
+        <td class="w-niv"><span class="b n-tronc">Troncal</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span> <span class="b e-tovig">TO vigente</span><span class="ed-note">Comunicación que aprueba el TO SFD, base del texto consolidado en uso. Vigencia 29/11/2023 confirmada en el PDF oficial</span></td>
+        <td class="w-mod">Aprueba el TO SFD. Deroga Sec. 11 del TO de A 7724. Deja sin efecto "Req. operativos mínimos del área de SI – TI"</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A7783.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-rmrtsd.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+<!-- ══════════════ CAT 3 ══════════════ -->
+<div class="section c3" id="cat3">
+  <div class="section-hdr">
+    <div class="num">3</div>
+    <div>
+      <h2>💳 PSP, billeteras digitales, pagos y fraude</h2>
+      <p>Marco regulatorio de PSP/PSPCP, billeteras digitales, registro interoperable, fraude en transferencias, QR y consentimiento en enrolamiento</p>
+    </div>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th scope="col" class="w-n">N°</th><th scope="col" class="w-norma">Norma</th><th scope="col" class="w-tipo">Tipo de referencia</th><th scope="col" class="w-fecha">Fecha</th>
+      <th scope="col" class="w-to">TO afectado</th><th scope="col" class="w-tema">Tema normativo</th>
+      <th scope="col" class="w-rel">Relación con ciberseguridad / fraude (interpretación editorial)</th>
+      <th scope="col" class="w-suj">Sujetos alcanzados</th>
+      <th scope="col" class="w-niv">Nivel de relevancia</th><th scope="col" class="w-est">Estado de validación</th>
+      <th scope="col" class="w-mod">Modifica / complementa</th><th scope="col" class="w-link">Link oficial</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="w-n">8</td>
+        <td class="w-norma"><strong>Com. "A" 6859</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">09/01/2020</td>
+        <td class="w-to">TO "Proveedores de servicios de pago" (SNP-PSP)</td>
+        <td class="w-tema">Antecedente relevante sobre fondos de clientes de PSP: dispone que los fondos acreditados en cuentas de pago deben encontrarse en cuentas a la vista, en pesos, en EF del país, disponibles de forma inmediata, y exige una cuenta operativa separada para transacciones por cuenta propia. El texto base del régimen PSPCP surge de la Com. A 6885</td>
+        <td class="w-rel">Primera regla de protección de fondos de clientes en el ecosistema fintech de pagos: separa los fondos de clientes del giro propio del PSP y garantiza su disponibilidad inmediata</td>
+        <td class="w-suj"><span class="psp">PSP</span></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Sanción 09/01/2020, BO 14/01/2020 (Infoleg). Reformulada como antecedente sobre fondos de clientes, no como origen general del régimen PSP</span></td>
+        <td class="w-mod">Antecedente del régimen PSPCP formalizado por A 6885</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A6859.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">9</td>
+        <td class="w-norma"><strong>Com. "A" 6885</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">30/01/2020<br><em>BO: 06/02/2020 · Registro PSPCP habilitado: 01/03/2020</em></td>
+        <td class="w-to">TO "SNP-PSP" — texto base del régimen PSPCP</td>
+        <td class="w-tema">Norma base del régimen de Proveedores de Servicios de Pago que ofrecen Cuentas de Pago (PSPCP): cuentas de pago en pesos de libre disponibilidad, CVU, custodia de fondos de clientes en cuentas a la vista en EF, registro en BCRA</td>
+        <td class="w-rel">Fundamento del régimen PSPCP: define la estructura de custodia de fondos y el registro, base para aplicar PUSF, normas de fraude y requisitos de seguridad a las fintechs de pagos</td>
+        <td class="w-suj"><span class="psp">PSPCP</span></td>
+        <td class="w-niv"><span class="b n-tronc">Troncal</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span></td>
+        <td class="w-mod">Texto base del régimen PSPCP (TO SNP-PSP)</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A6885.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">10</td>
+        <td class="w-norma"><strong>Com. "A" 7328</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">12/07/2021<br><em>BO: 15/07/2021 · Circular SINAP 1-135</em><br><em>Implementación: 01/08/2021 (cuentas nuevas) y 31/10/2021 (cuentas ya abiertas)</em></td>
+        <td class="w-to">TO "SNP-PSP" (punto 1.4)</td>
+        <td class="w-tema"><strong>Medidas para mitigar el fraude en operaciones con billeteras digitales.</strong> Habilita que las cuentas de pago tengan más de un titular y establece los recaudos que deben cumplir las EF y los PSPCP que prestan el servicio de billetera digital: verificar la identidad de quien solicita la apertura de una cuenta de pago, asociar a la billetera únicamente instrumentos o cuentas cuyo titular (o cotitular) coincida con el titular de la billetera, y aplicar mecanismos fuertes de identificación y autenticación del usuario</td>
+        <td class="w-rel">Primera norma específicamente antifraude sobre billeteras digitales. La regla de titularidad coincidente ataca directamente el uso de datos de terceros obtenidos por engaño, y la exigencia de autenticación fuerte es el antecedente de los requisitos que luego consolidó el TO de SFD (A 7783)</td>
+        <td class="w-suj"><span class="amb">EF + PSPCP que prestan el servicio de billetera digital</span></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Fila corregida en la revisión del 01/09/2026: la versión anterior describía una obligación de notificación de DEBIN que no corresponde a esta comunicación. Contenido y TO afectado contrastados contra el PDF oficial y la tabla de correlaciones del TO PSP</span></td>
+        <td class="w-mod">Modifica el punto 1.4 del TO PSP. Antecedente de A 7462 y del TO SFD</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/pdfs/comytexord/A7328.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">11</td>
+        <td class="w-norma"><strong>Com. "A" 7363</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">10/09/2021<br><em>Implementación: 01/12/2021</em></td>
+        <td class="w-to">TO "SNP – Servicios de pago" (Circular SINAP 1-141)</td>
+        <td class="w-tema">Enrolamiento de cuentas en billeteras digitales: obliga a permitir que los titulares asocien a la billetera las cuentas a la vista o de pago de las que sean titulares o cotitulares, mediante CBU/CVU o ALIAS, a habilitar pagos con transferencia desde esas cuentas y a notificar a los clientes. Implementación operativa al 01/12/2021</td>
+        <td class="w-rel">Norma de interoperabilidad del enrolamiento (apertura del ecosistema de billeteras). La capa de consentimiento y prevención del enrolamiento fraudulento se incorporó luego con A 7462/A 7463</td>
+        <td class="w-suj"><span class="amb">EF + PSPCP que brindan billetera digital o similar</span></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Confirmada contra el PDF oficial (10/09/2021, SINAP 1-141). Tema corregido: interoperabilidad de enrolamiento, no antifraude</span></td>
+        <td class="w-mod">Complementa TO SNP servicios de pago. Antecedente de A 7462/A 7463</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/a7363.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">12</td>
+        <td class="w-norma"><strong>Com. "A" 7462</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">24/02/2022</td>
+        <td class="w-to">TO "SNP-PSP" y TO "SNP – Servicios de pago"</td>
+        <td class="w-tema">Define el servicio de "billetera digital". Crea el Registro de Billeteras Digitales Interoperables. Amplía las funciones registrables de los PSP. Establece el proceso de identificación fehaciente de usuarios y los mecanismos de detección de actividades sospechosas o inusuales</td>
+        <td class="w-rel">Pieza central del régimen de billeteras: registro obligatorio de prestadores, identificación fehaciente de usuarios y exigencia de mecanismos de detección de actividad sospechosa. El detalle técnico de autenticación multifactor y validación de identidad está regulado en el TO de SFD (A 7783, Sec. 3)</td>
+        <td class="w-suj"><span class="amb">EF + PSP (PSPCP, PSI)</span></td>
+        <td class="w-niv"><span class="b n-tronc">Troncal</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span></td>
+        <td class="w-mod">Modifica TO PSP. Modificada por A 7593, A 7769, A 7907, A 7919, A 8102, A 8287, A 8432</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A7462.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">13</td>
+        <td class="w-norma"><strong>Com. "A" 7463</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">24/02/2022</td>
+        <td class="w-to">TO "SNP – Transferencias – Normas Complementarias"</td>
+        <td class="w-tema">Medidas para mitigar, prevenir y gestionar el fraude en operaciones de transferencias: consentimiento del cliente en el enrolamiento de cuentas en billeteras, parámetros de uso configurables (límites de monto, períodos, cantidad de operaciones), trazabilidad de operaciones presumiblemente fraudulentas y desvinculación de cuentas</td>
+        <td class="w-rel">Norma de referencia antifraude en transferencias inmediatas: organiza la respuesta de los participantes del esquema ante reclamos por fraude y la trazabilidad respetando la confidencialidad</td>
+        <td class="w-suj"><span class="amb">EF + PSP + Administradores de esquemas</span></td>
+        <td class="w-niv"><span class="b n-tronc">Troncal</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Circular SINAP 1-153, origen del régimen antifraude del TO SNP-TR-NC. El TO vigente incorpora hasta la Com. A 8436 (TO al 14/05/2026)</span></td>
+        <td class="w-mod">Origen del TO SNP-TR-NC. Complementa A 7462</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A7463.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-tr-nc.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">14</td>
+        <td class="w-norma"><strong>Com. "A" 7533</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">29/06/2022<br><em>BO: 18/08/2022</em></td>
+        <td class="w-to">TO "SNP – Servicios de pago"</td>
+        <td class="w-tema">Comunicación que da nombre y ordena el TO "Sistema Nacional de Pagos – Servicios de pago": pagos con transferencia, QR, CVU e interoperabilidad de billeteras. El historial del TO se remonta a la Com. A 2622 y posteriores</td>
+        <td class="w-rel">Ordena reglas operativas y técnicas del sistema de pagos con impacto en seguridad transaccional e interoperabilidad. Numerosas secciones del TO vigente figuran "S/Com. A 7533"</td>
+        <td class="w-suj"><span class="amb">EF / PSP / Redes / Administradores</span></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Sanción 29/06/2022 y BO 18/08/2022 confirmados en Infoleg. El historial oficial del TO SNP-SP la identifica como la comunicación titular del texto ordenado</span></td>
+        <td class="w-mod">Ordena el TO SNP-SP (historial desde A 2622)</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/Pdfs/comytexord/A7533.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">15</td>
+        <td class="w-norma"><strong>Com. "A" 7712</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">07/03/2023</td>
+        <td class="w-to">TO "SNP-PSP" y régimen de informes de PSP</td>
+        <td class="w-tema">Aclara el alcance del informe especial de cumplimiento que deben presentar los PSP: cubre el cumplimiento de las normas PUSF (no la totalidad de la normativa aplicable)</td>
+        <td class="w-rel">Delimita el perímetro de la auditoría externa anual de PSP introducida por A 7593. Antecedente del régimen formalizado luego en A 7972</td>
+        <td class="w-suj"><span class="psp">PSPCP + PSI</span></td>
+        <td class="w-niv"><span class="b n-comp">Complementaria</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span></td>
+        <td class="w-mod">Aclara A 7593. Antecede a A 7972</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A7712.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">16</td>
+        <td class="w-norma"><strong>Com. "A" 7769</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">18/05/2023<br><em>Implementación original: 01/09/2023</em><br><em>Vigencia efectiva de la interoperabilidad QR con tarjeta de crédito: 30/04/2024, tras sucesivas prórrogas</em></td>
+        <td class="w-to">TO "SNP-PSP", TO "SNP-Transferencias" y TO "SNP-SP"</td>
+        <td class="w-tema">Amplía la interoperabilidad del código QR para que cualquier billetera digital pueda leer QR también para pagos con tarjeta de crédito, con cronograma de adecuación y seguimiento mensual. El plazo original del punto 10 fue prorrogado en varias oportunidades y la obligación entró efectivamente en vigencia el 30/04/2024</td>
+        <td class="w-rel">Refuerza la interoperabilidad del ecosistema QR, con implicancias sobre identidad del aceptador y seguridad de la transacción en pagos con tarjeta vía QR</td>
+        <td class="w-suj"><span class="amb">EF + PSP</span></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Fecha de vigencia efectiva incorporada en la revisión del 01/09/2026: el plazo del punto 10 fue prorrogado sucesivamente, siendo la última prórroga la dispuesta por la Com. A 7942</span></td>
+        <td class="w-mod">Modifica TO SNP-SP, SNP-Transferencias y TO PSP. Plazo prorrogado por A 7942, entre otras</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/Pdfs/comytexord/A7769.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">17</td>
+        <td class="w-norma"><strong>Com. "A" 7907</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">01/12/2023</td>
+        <td class="w-to">TO "SNP-PSP"</td>
+        <td class="w-tema">Actualización del TO de Proveedores de Servicios de Pago en función de las Com. A 7759, A 7769 y B 12648: ajustes al régimen de cuentas de pago, funciones registrables y disposiciones operativas del ecosistema de pagos</td>
+        <td class="w-rel">Ajustes operativos al régimen de cuentas de pago con incidencia en el control transaccional de los PSPCP</td>
+        <td class="w-suj"><span class="amb">EF, PSPCP, PSI, aceptadores, adquirentes, agregadores y empresas de cobranza extrabancaria</span></td>
+        <td class="w-niv"><span class="b n-comp">Complementaria</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span></td>
+        <td class="w-mod">Actualiza TO PSP</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A7907.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">18</td>
+        <td class="w-norma"><strong>Com. "A" 7919</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">13/12/2023</td>
+        <td class="w-to">TO "SNP – Servicios de pago" — Sección 5 (servicio de billetera digital)</td>
+        <td class="w-tema">Actualiza la Sección 5 del TO SNP-SP: trazabilidad y auditabilidad obligatorias de las actividades del servicio de billetera digital (puntos 5.5.1.2, 5.5.1.3, 5.5.2.1 y 5.5.3), con integridad, protección y resguardo de los registros. Habilita códigos QR para cuentas corrientes de personas jurídicas</td>
+        <td class="w-rel">Refuerza la evidencia forense disponible ante investigaciones de fraude en billeteras: los registros de enrolamiento y operación deben ser trazables y auditables</td>
+        <td class="w-suj"><span class="amb">EF + PSP que prestan billetera digital (PSPCP / PSI según la obligación)</span></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Alcance ampliado en la revisión del 01/09/2026: el punto 5.5.1 alcanza a las EF y a los PSP que presten el servicio de billetera digital; el 5.5.2 acota determinados recaudos a EF y PSPCP y el 5.5.3 contempla expresamente a los PSI</span></td>
+        <td class="w-mod">Actualiza TO SNP-SP (Sec. 5)</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/Pdfs/comytexord/A7919.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">19</td>
+        <td class="w-norma"><strong>Com. "A" 7972</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">05/03/2024<br><em>BO: 08/03/2024</em><br><em>Régimen vigente desde: 31/03/2024</em></td>
+        <td class="w-to">TO "Informe de Contadores Públicos Independientes sobre el cumplimiento de las Normas del BCRA por parte de los Proveedores de Servicios de Pago" (t-RI-ICPIPSP.pdf)</td>
+        <td class="w-tema">Regula el Informe de Contadores Públicos Independientes sobre el cumplimiento de normas BCRA por parte de los PSP. Para PSPCP: informe especial trimestral de auditor externo que certifica el cumplimiento de las normas aplicables y la integridad del régimen informativo; el informe del trimestre cerrado al 31/12 incluye además la opinión sobre el cumplimiento de las normas PUSF. Para PSI con servicio de billetera digital: informe anual sobre cumplimiento de PUSF</td>
+        <td class="w-rel">Marco de aseguramiento del cumplimiento normativo de los PSP mediante auditoría externa independiente. No constituye una auditoría integral de ciberseguridad; su alcance está delimitado por el régimen RI-PSP y las normas PUSF</td>
+        <td class="w-suj"><span class="psp">PSPCP + PSI con billetera</span></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Enlace del TO corregido en la revisión del 01/09/2026: el archivo t-RI-PSP.pdf corresponde al Régimen Informativo de PSPCP, no a este TO. El TO correcto es t-RI-ICPIPSP.pdf (Versión 1a, Com. A 7972, vigencia 31/03/2024)</span></td>
+        <td class="w-mod">Crea el TO del Informe de CPI sobre PSP. Formaliza el régimen anticipado por A 7593/A 7712. Referenciada por A 8102</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A7972.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/Pdfs/Texord/t-RI-ICPIPSP.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">20</td>
+        <td class="w-norma"><strong>Com. "A" 8038</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">06/06/2024</td>
+        <td class="w-to">TO "SNP-PSP"</td>
+        <td class="w-tema">Modifica el régimen de administración de fondos de clientes de PSPCP: elimina la obligación de trasladar a los clientes la rentabilidad de las inversiones, dejando sin efecto la Com. A 7825</td>
+        <td class="w-rel">Incide en la estructura de custodia y disponibilidad de los fondos de clientes de PSPCP</td>
+        <td class="w-suj"><span class="psp">PSPCP</span></td>
+        <td class="w-niv"><span class="b n-oper">Operativa</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span></td>
+        <td class="w-mod">Deja sin efecto A 7825. Modifica TO PSP</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8038.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">21</td>
+        <td class="w-norma"><strong>Com. "A" 8102</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">10/09/2024</td>
+        <td class="w-to">TO "SNP-PSP"</td>
+        <td class="w-tema">Actualiza las normas PSP: impide tramitar inscripciones simultáneas para distintas funciones; incorpora el régimen informativo trimestral para PSPCP (Sec. 3 del TO); ajusta los informes de cumplimiento de PSPCP y PSI a los requisitos del régimen RI-PSP</td>
+        <td class="w-rel">Mejora la supervisión y trazabilidad del cumplimiento de los PSP a través de información trimestral y auditoría alineada al RI-PSP</td>
+        <td class="w-suj"><span class="psp">PSP / PSPCP</span></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span></td>
+        <td class="w-mod">Modifica TO PSP (en función de A 7972 y B 12648)</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8102.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">22</td>
+        <td class="w-norma"><strong>Com. "A" 8176</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">14/01/2025<br><em>Circular SINAP 1-226</em></td>
+        <td class="w-to">TO "SNP-PSP", TO "SNP – Transferencias", TO "SNP – Servicios de pago", TO "SNP – Cheques y otros instrumentos compensables" y TO "Plataformas para el financiamiento MiPyME"</td>
+        <td class="w-tema">Actualización terminológica transversal de cinco textos ordenados del Sistema Nacional de Pagos, derivada del Decreto 953/24 (disolución de la AFIP y creación de la Agencia de Recaudación y Control Aduanero, ARCA): circula las hojas de reemplazo correspondientes</td>
+        <td class="w-rel">Ajuste administrativo sin contenido sustantivo de seguridad; relevante solo para mantener actualizadas las referencias normativas en documentación de cumplimiento</td>
+        <td class="w-suj"><span class="amb">EF, CEC, redes de cajeros, PSP, PSPCP, PSI, redes de transferencias, administradores de esquemas, plataformas MiPyME, aceptadores, adquirentes, agregadores y empresas de cobranza extrabancaria</span></td>
+        <td class="w-niv"><span class="b n-oper">Operativa</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Confirmada contra el PDF oficial: actualización por Decreto 953/24 (AFIP→ARCA); TO afectados y sujetos completados</span></td>
+        <td class="w-mod">Hojas de reemplazo en TO PSP, TO SNP-Transferencias, TO SNP-SP, TO SNP-Cheques y TO Plataformas MiPyME</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8176.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">23</td>
+        <td class="w-norma"><strong>Com. "A" 8206</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">27/02/2025<br><em>BO: 13/03/2025</em></td>
+        <td class="w-to">TO "SNP-PSP" y TO "SNP-SP"</td>
+        <td class="w-tema">Viaje con QR (VQR): regula el pago del transporte público mediante QR "consumer presented" — exige billetera digital interoperable registrada, habilitación previa del BCRA para ofrecer VQR, y que los administradores QR estén inscriptos en el Registro de PSP. Incorpora la figura de Administrador QR</td>
+        <td class="w-rel">Nuevas funcionalidades de pago QR con implicancias sobre identidad de participantes, habilitación previa y control de fraude en esquemas de transporte</td>
+        <td class="w-suj"><span class="amb">EF + PSPCP + PSI + Administradores QR</span></td>
+        <td class="w-niv"><span class="b n-comp">Complementaria</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Confirmada contra el PDF oficial: 27/02/2025, Circular SINAP 1-229</span></td>
+        <td class="w-mod">Complementa TO PSP y TO SNP-SP. Incorporada al TO SNP-SP por A 8303</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8206.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">24</td>
+        <td class="w-norma"><strong>Com. "A" 8287</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">25/07/2025</td>
+        <td class="w-to">TO "SNP-PSP"</td>
+        <td class="w-tema">Circula una actualización del TO PSP en función de las Com. A 7812 y A 8206, con ajustes sobre funciones registrables y Administrador QR/VQR. Fue la última comunicación incorporada al TO PSP hasta la revisión de junio de 2026; el TO vigente incorpora ahora hasta la Com. A 8454 (TO al 14/07/2026)</td>
+        <td class="w-rel">Ajustes al régimen de cuentas de pago con incidencia en gestión de fondos y cumplimiento de PSPCP</td>
+        <td class="w-suj"><span class="amb">PSP y demás sujetos alcanzados por el TO PSP, según función</span></td>
+        <td class="w-niv"><span class="b n-comp">Complementaria</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Actualizado al 01/09/2026: ya no es la última comunicación incorporada al TO SNP-PSP. El TO descargable indica ahora "Última comunicación incorporada: A 8454 — Texto ordenado al 14/07/2026"</span></td>
+        <td class="w-mod">Incorporada al TO SNP-PSP. Superada como última incorporación por A 8454</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8287.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-psp.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">25</td>
+        <td class="w-norma"><strong>Com. "A" 8303</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span><br><span class="b t-to">Circular de TO</span></td>
+        <td class="w-fecha">19/08/2025<br><em>BO: 20/08/2025</em></td>
+        <td class="w-to">TO "SNP – Servicios de pago"</td>
+        <td class="w-tema">Circula las hojas del TO SNP-SP incorporando las disposiciones de las Com. A 8032, A 8144, A 8162, A 8180 y A 8206, y B 12333: billeteras interoperables, inscripción e integración de actores del ecosistema</td>
+        <td class="w-rel">Consolidación del marco de billeteras y pagos digitales: interoperabilidad, registro de actores, seguridad en aceptación de QR y trazabilidad del ecosistema</td>
+        <td class="w-suj"><span class="amb">EF, PSPCP, Redes, PSI, Administradores</span></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span> <span class="b e-tovig">TO vigente</span><span class="ed-note">Última circular del TO SNP-SP (texto consolidado en uso)</span></td>
+        <td class="w-mod">Circula el TO SNP-SP. Consolida A 8032, A 8144, A 8162, A 8180, A 8206, B 12333</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8303.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-spd.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">26</td>
+        <td class="w-norma"><strong>Com. "A" 8432</strong> <span class="b b-new">2026</span></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">30/04/2026<br><em>BO: 06/05/2026</em></td>
+        <td class="w-to">TO "SNP-PSP" — incorporada al TO vigente por la Com. A 8454 (TO al 14/07/2026)</td>
+        <td class="w-tema">Crea la figura "PSPCP como Servicio" (provisión de cuentas de pago a clientes de terceros/tomadores). Refuerza los requisitos de inscripción: banco patrocinante, nómina de tomadores con habilitación previa del BCRA, antecedentes de accionistas (más del 10%), socios y directivos. Prohíbe operar a personas jurídicas no constituidas regularmente en el país o con vínculos a actividades terroristas o sanciones. Extiende el plazo para iniciar operaciones de 6 a 12 meses. Establece causales de baja de oficio</td>
+        <td class="w-rel">Los clientes del tomador son clientes del PSPCP como Servicio, y los sistemas y procesos del tomador deben ajustarse a la normativa BCRA en materia de identificación y conocimiento del cliente, onboarding digital, PLA/FT, prevención del fraude, seguridad de la información, continuidad operativa y gestión de riesgos tecnológicos y operativos. PSP ya inscriptos: 90 días corridos para adecuarse; PSPCP como Servicio operativos: 10 días hábiles para informar tomadores</td>
+        <td class="w-suj"><span class="psp">PSP / PSPCP como Servicio / tomadores del servicio</span></td>
+        <td class="w-niv"><span class="b n-tronc">Troncal</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span> <span class="b e-tovig">TO vigente</span><span class="ed-note">Fecha de emisión 30/04/2026; 06/05/2026 corresponde al BO. Actualizado al 01/09/2026: la incorporación al TO SNP-PSP quedó confirmada a través de la Com. A 8454 (puntos 1.3.2., 1.4.1.1., 2.2.2.10., 2.2.4., 2.2.5., 4.4., 4.5. y Sec. 7 del TO)</span></td>
+        <td class="w-mod">Modifica TO PSP. Incorporada al TO por A 8454</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8432.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-psp.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">27</td>
+        <td class="w-norma"><strong>Com. "A" 8406</strong> <span class="b b-new">2026</span></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">02/03/2026<br><em>BO: 20/03/2026 · Circular SINAP 1-241</em><br><em>Disponibilidad obligatoria del servicio: 31/08/2026</em></td>
+        <td class="w-to">TO "SNP – Transferencias – Normas Complementarias"</td>
+        <td class="w-tema">Crea el "cobro con transferencia" (CCT) como única modalidad de transferencias inmediatas habilitada para cobros recurrentes, disponible desde el 31/08/2026 para conceptos vinculados a préstamos. Define los participantes (aceptador de CCT, cliente ordenante, cliente receptor, entidad originante, receptora y patrocinadora, PSPCP originante y receptor). Exige consentimiento explícito del cliente receptor mediante el procedimiento técnico basado en el estándar oAuth2 acordado en la CIMPRA para transferencias <em>pull</em>; obliga al cliente ordenante a notificar por medios electrónicos los cobros del día hábil siguiente y a habilitar la baja del consentimiento; el proveedor de la cuenta debe permitir la baja desde sus canales electrónicos. Limita los intentos de cobro a 1 por período más 2 reintentos (48 y 96 horas). Sólo admite cuotas fijas e iguales y relación cuota/ingreso máxima del 30% al originar el crédito. El aceptador debe validar el token de consentimiento y la vinculación previa de la cuenta</td>
+        <td class="w-rel">Norma de referencia para el diseño antifraude de débitos recurrentes: la operatoria <strong>no admite reversas</strong> y la responsabilidad frente al fraude recae en el cliente ordenante (el prestamista), lo que traslada la carga de los controles de autenticación, validación de consentimiento y detección de operaciones indebidas a quien origina el cobro. El uso de oAuth2 con token de consentimiento y la baja inmediata desde el proveedor de la cuenta introducen requisitos concretos de gestión de identidades, trazabilidad y notificación en los canales digitales. Adicionalmente, exige a los proveedores no financieros de crédito habilitados cumplir el punto 3.3 (identificación digital de clientes) del TO de SFD</td>
+        <td class="w-suj"><span class="amb">EF + PSPCP + OPNFC habilitados + redes de transferencias + administradores de esquemas + aceptadores de pago con transferencia</span></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span> <span class="b e-pto">Pendiente de incorporación al TO</span><span class="ed-note">Verificado al 01/09/2026 contra el TO "SNP – Transferencias – Normas Complementarias" publicado por el BCRA (última comunicación incorporada A 8436, TO al 14/05/2026): el texto consolidado no contiene aún la figura "Cobro con Transferencia" ni las disposiciones específicas de A 8406. Las referencias a oAuth2 presentes en el TO corresponden al régimen de transferencias inmediatas <em>pull</em> incorporado por A 8399</span></td>
+        <td class="w-mod">Adecua el TO SNP-Transferencias-Normas Complementarias. Excluye de ciertas obligaciones a los sujetos indicados en A 8180 pto. 2 y A 7514 pto. 2</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8406.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-tr-nc.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">28</td>
+        <td class="w-norma"><strong>Com. "A" 8454</strong> <span class="b b-new">2026</span></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span><br><span class="b t-to">Circular de TO</span></td>
+        <td class="w-fecha">14/07/2026<br><em>BO: 29/07/2026 · Circular SINAP 1-249</em><br><em>Vigencia hojas: 15/07/2026</em></td>
+        <td class="w-to">TO "SNP-PSP" (t-snp-psp.pdf) — hojas de reemplazo</td>
+        <td class="w-tema">Circula la versión consolidada del TO de Proveedores de Servicios de Pago incorporando las disposiciones de las Com. A 8411 y A 8432. El TO resultante incluye el punto 1.5 (incumplimientos y sanciones), el punto 1.4.1.1 y la Sección 4.5 (PSPCP como Servicio), el punto 4.4 (verificación de identidad por remisión al punto 5.5.2.1 del TO SNP-SP), el punto 4.6 (prohibición de operar con activos digitales no autorizados) y la Sección 7 (PLA/FT)</td>
+        <td class="w-rel">Es el texto consolidado de referencia para auditar a PSP y PSPCP: reúne en un único documento el régimen de registro, las obligaciones sobre fondos de clientes, la verificación de identidad, el esquema de PSPCP como Servicio y la remisión al régimen sancionatorio. Punto de partida para cualquier revisión de cumplimiento sobre el ecosistema PSP</td>
+        <td class="w-suj"><span class="amb">PSP / PSPCP / PSI, redes de cajeros y de transferencias, administradores de esquemas y QR, aceptadores, adquirentes, agregadores y empresas de cobranza extrabancaria</span></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span> <span class="b e-tovig">TO vigente</span><span class="ed-note">Última comunicación incorporada al TO SNP-PSP, confirmada en el encabezado del PDF oficial: "Última comunicación incorporada: A 8454 — Texto ordenado al 14/07/2026"</span></td>
+        <td class="w-mod">Circula el TO SNP-PSP. Consolida A 8411 y A 8432</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8454.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-psp.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+</tbody>
+  </table>
+  </div>
+</div>
+
+
+<!-- ══════════════ CAT 4 ══════════════ -->
+<div class="section c4" id="cat4">
+  <div class="section-hdr">
+    <div class="num">4</div>
+    <div>
+      <h2>🚨 Ciberincidentes — Respuesta, recuperación y notificación (RRCI)</h2>
+      <p>Lineamientos para la respuesta y recuperación ante ciberincidentes. Desde 2025: obligación de notificación al BCRA con plazos definidos</p>
+    </div>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th scope="col" class="w-n">N°</th><th scope="col" class="w-norma">Norma</th><th scope="col" class="w-tipo">Tipo de referencia</th><th scope="col" class="w-fecha">Fecha</th>
+      <th scope="col" class="w-to">TO afectado</th><th scope="col" class="w-tema">Tema normativo</th>
+      <th scope="col" class="w-rel">Relación con ciberseguridad / fraude (interpretación editorial)</th>
+      <th scope="col" class="w-suj">Sujetos alcanzados</th>
+      <th scope="col" class="w-niv">Nivel de relevancia</th><th scope="col" class="w-est">Estado de validación</th>
+      <th scope="col" class="w-mod">Modifica / complementa</th><th scope="col" class="w-link">Link oficial</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="w-n">29</td>
+        <td class="w-norma"><strong>Com. "A" 7266</strong></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">16/04/2021<br><em>BO: 20/04/2021</em></td>
+        <td class="w-to">TO "Lineamientos para la Respuesta y Recuperación ante Ciberincidentes (RRCI)"</td>
+        <td class="w-tema">Aprueba los lineamientos RRCI: gobierno y roles, planificación y preparación, detección e investigación (incluida causa raíz), respuesta, recuperación, comunicación interna y externa, ejercicios. Define ciberincidente como evento que pone en peligro la ciberseguridad o infringe políticas/procedimientos, sea o no producto de actividad maliciosa</td>
+        <td class="w-rel">Marco de referencia para la gestión de ciberincidentes en el ecosistema financiero argentino, alineado con prácticas del FSB. Sustento de los planes de respuesta a incidentes exigibles a los sujetos alcanzados</td>
+        <td class="w-suj"><span class="amb">EF + PSPCP + IMF sistémicas</span><br><em>Alcance ampliado a todos los PSP por A 8280</em></td>
+        <td class="w-niv"><span class="b n-tronc">Troncal</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span></td>
+        <td class="w-mod">Texto base RRCI. Actualizada por A 8280 (2025)</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/pdfs/comytexord/A7266.pdf" target="_blank">PDF ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">30</td>
+        <td class="w-norma"><strong>Com. "A" 8280</strong> <span class="b b-new">2025</span></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">17/07/2025<br><em>BO: 24/07/2025 · Vigencia TO: 18/07/2025</em><br><em>PSP no PSPCP: 60 días hábiles para implementar</em></td>
+        <td class="w-to">TO "Lineamientos RRCI" — versión 2a (incorpora Sección 3: Notificación de ciberincidentes)</td>
+        <td class="w-tema">Actualiza los lineamientos RRCI e incorpora la obligación de notificar ciberincidentes a la Gerencia de Auditoría Externa de Sistemas de la SEFyC (audext.incidente@bcra.gob.ar). Categoriza los incidentes en críticos, importantes y no relevantes. <strong>Plazos:</strong> incidentes importantes y críticos: notificación inicial dentro de la primera hora de ocurrido o detectado el incidente; reportes subsiguientes hasta la normalización; reporte de cierre con posterioridad a la contención, recuperación y resolución del incidente, dentro de un plazo no mayor a 5 días corridos. Amplía el alcance a todos los PSP inscriptos en el Registro del BCRA (antes solo PSPCP). Incluye incidentes originados en terceras partes cuando afecten servicios o pongan en riesgo la confidencialidad, integridad o disponibilidad de la información</td>
+        <td class="w-rel">Cambia el paradigma de gestión de incidentes en el sector: de lineamientos orientativos a obligación concreta de notificación con plazos estrictos. Impacta directamente en los runbooks de respuesta a incidentes (la notificación inicial dentro de la primera hora exige procesos de escalamiento preparados de antemano)</td>
+        <td class="w-suj"><span class="amb">EF + todos los PSP registrados + IMF sistémicas</span></td>
+        <td class="w-niv"><span class="b n-tronc">Troncal</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span> <span class="b e-tovig">TO vigente</span><span class="ed-note">Última comunicación incorporada al TO RRCI (texto consolidado en uso, TO al 17/07/2025)</span></td>
+        <td class="w-mod">Modifica TO RRCI (actualiza A 7266). El TO vigente consolida A 7266 + A 8280</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8280.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/Pdfs/Texord/t-rrci.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+<!-- ══════════════ CAT 5 ══════════════ -->
+<div class="section c5" id="cat5">
+  <div class="section-hdr">
+    <div class="num">5</div>
+    <div>
+      <h2>🏗️ Continuidad, resiliencia operacional y terceros tecnológicos</h2>
+      <p>Riesgo operacional, resiliencia operacional, continuidad del negocio y gestión de proveedores tecnológicos</p>
+    </div>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th scope="col" class="w-n">N°</th><th scope="col" class="w-norma">Norma</th><th scope="col" class="w-tipo">Tipo de referencia</th><th scope="col" class="w-fecha">Fecha</th>
+      <th scope="col" class="w-to">TO afectado</th><th scope="col" class="w-tema">Tema normativo</th>
+      <th scope="col" class="w-rel">Relación con ciberseguridad / fraude (interpretación editorial)</th>
+      <th scope="col" class="w-suj">Sujetos alcanzados</th>
+      <th scope="col" class="w-niv">Nivel de relevancia</th><th scope="col" class="w-est">Estado de validación</th>
+      <th scope="col" class="w-mod">Modifica / complementa</th><th scope="col" class="w-link">Link oficial</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="w-n">31</td>
+        <td class="w-norma"><strong>TO TI/SI — Secciones 6 y 7</strong></td>
+        <td class="w-tipo"><span class="b t-sec">Sección de TO</span></td>
+        <td class="w-fecha">Vigentes desde 06/09/2023</td>
+        <td class="w-to">TO "Req. mínimos TI/SI" — Sec. 6 (gestión de la continuidad del negocio) y Sec. 7 (infraestructura tecnológica y procesamiento)</td>
+        <td class="w-tema">Sec. 6: marco de continuidad, ciberresiliencia, análisis de impacto al negocio (BIA), estrategias y planes de continuidad, ejercicios y pruebas. Sec. 7: gestión de la infraestructura tecnológica, gestión de cambios, comunicaciones, procesamiento, copias de respaldo y monitoreo</td>
+        <td class="w-rel">Núcleo de la exigencia de continuidad operativa ante ciberincidentes y desastres tecnológicos. Referencia obligada para proyectos de BCM/DRP en entidades reguladas</td>
+        <td class="w-suj"><span class="ef">EF</span><br><em>PSP: exigible desde el 04/08/2026 (A 8398)</em></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Numeración corregida en la revisión del 01/09/2026 contra el índice del TO vigente: continuidad es la Sección 6 e infraestructura la Sección 7 (la versión anterior las consignaba como 7 y 9). Origen: Com. A 7724; TO circulado por A 8401</span></td>
+        <td class="w-mod">Origen: Com. A 7724. TO vigente circulado por A 8401</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A7724.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-rmgcti.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">32</td>
+        <td class="w-norma"><strong>TO TI/SI — Sección 10</strong> <span class="b b-new">2026</span></td>
+        <td class="w-tipo"><span class="b t-sec">Sección de TO</span></td>
+        <td class="w-fecha">05/02/2026<br><em>EF: vigente desde 06/02/2026 · PSP: exigible desde 04/08/2026</em></td>
+        <td class="w-to">TO "Req. mínimos TI/SI" — Sec. 10 (gestión de la relación con terceras partes), según A 8398</td>
+        <td class="w-tema">Nueva redacción integral de la sección de terceras partes: tercerización de procesos/servicios/actividades de TI dentro y fuera del país; exclusiones (servicios de información general de mercados, servicios de adopción obligatoria, organismos del Estado); prohibición de tercerizar funciones de auditoría interna/externa; evaluaciones de riesgo documentadas; aprobación por máximas autoridades; auditorías internas sobre tercerizados; informes de auditoría externa disponibles para la SEFyC; facultad del BCRA de auditar proveedores incluso en el exterior, a costo de la entidad</td>
+        <td class="w-rel">Marco reforzado de gestión de terceros tecnológicos: la responsabilidad de la entidad es indelegable y la cadena de subcontratación debe ser trazable. Relevante para contratos cloud, SOC y desarrollo tercerizado</td>
+        <td class="w-suj"><span class="amb">EF + PSP registrados (ambos exigibles al 01/09/2026)</span></td>
+        <td class="w-niv"><span class="b n-tronc">Troncal</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Nueva Sec. 10 cuyo origen es la Com. A 8398. El TO vigente que la incorpora fue circulado por la Com. A 8401 (TO al 13/02/2026)</span></td>
+        <td class="w-mod">Reemplaza Sec. 10 de A 7724. Origen: A 8398; incorporada al TO vigente por A 8401</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8398.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-rmgcti.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">33</td>
+        <td class="w-norma"><strong>Com. "A" 8249</strong> <span class="b b-new">2025</span></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">02/06/2025<br><em>BO: 04/06/2025 · Vigencia puntos 1-9: 01/09/2025</em></td>
+        <td class="w-to">TO "Lineamientos para la Gestión de Riesgos en las Entidades Financieras" (t-lingeef.pdf) — Sec. 6 (riesgo operacional) y nueva Sec. 12 (resiliencia operacional)</td>
+        <td class="w-tema">Actualiza la gestión del riesgo operacional: formaliza el modelo de 3 líneas de defensa proporcional a la naturaleza y complejidad de la entidad; incorpora responsabilidades para Directorio y Alta Gerencia; añade el principio de transparencia; e incorpora la "Resiliencia Operacional" (Sec. 12) como la capacidad de continuar operaciones críticas durante situaciones adversas</td>
+        <td class="w-rel">Complementa la continuidad del negocio del TO TI/SI desde la óptica del riesgo operacional integral. La resiliencia operacional abarca disrupciones de origen tecnológico y ciberincidentes. La A 8249 incorporó este marco para entidades financieras; posteriormente la A 8471 extendió la Sección 6 a los PSPCP mediante un cronograma progresivo y fijó obligaciones específicas para los demás PSP desde el 01/01/2027</td>
+        <td class="w-suj"><span class="ef">Entidades financieras</span><br><em>PSP: alcanzados luego por A 8471</em></td>
+        <td class="w-niv"><span class="b n-rel">Relevante</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span><span class="ed-note">Actualizado al 01/09/2026: el TO de Lineamientos incorpora hasta la Com. A 8463 (la versión anterior de esta matriz consignaba A 8383). Las hojas de la A 8471 aún no fueron incorporadas</span></td>
+        <td class="w-mod">Modifica TO Lineamientos para la Gestión de Riesgos en EF (agrega Sec. 12)</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8249.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/texord/t-lingeef.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">34</td>
+        <td class="w-norma"><strong>Com. "A" 8457</strong> <span class="b b-new">2026</span></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">21/07/2026<br><em>BO: 29/07/2026 · Circular SINAP 1-250</em></td>
+        <td class="w-to">TO "Principios para las Infraestructuras del Mercado Financiero"</td>
+        <td class="w-tema">Actualiza el TO sobre Principios para las Infraestructuras del Mercado Financiero (PIMF), que recoge los principios CPMI-IOSCO aplicables a los sistemas de pago de importancia sistémica, depósitos centrales de valores, sistemas de liquidación de valores, entidades de contrapartida central y registros de operaciones</td>
+        <td class="w-rel">Relevante por el perímetro compartido: las IMF conocidas como Sistemas de Pago de importancia sistémica (INTERBANKING, COELSA, LINK y NEWPAY) son sujetos obligados del TO de Requisitos Mínimos TI/SI y, desde la A 8411, integran el "Grupo A" del régimen sancionatorio. Los principios PFMI abarcan riesgo operacional y resiliencia, por lo que conviene leerlos junto con el marco de continuidad y ciberresiliencia</td>
+        <td class="w-suj"><span class="imf">Infraestructuras del Mercado Financiero</span></td>
+        <td class="w-niv"><span class="b n-comp">Complementaria</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span> <span class="b e-tovig">TO vigente</span><span class="ed-note">Confirmada en el encabezado del TO: "Última comunicación incorporada: A 8457 — Texto ordenado al 21/07/2026", Versión 3a, vigencia 22/07/2026</span></td>
+        <td class="w-mod">Actualiza el TO de Principios para las IMF. Vinculada con A 8411</td>
+        <td class="w-link"><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8457.pdf" target="_blank">PDF ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-pimf.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td class="w-n">35</td>
+        <td class="w-norma"><strong>Com. "A" 8471</strong> <span class="b b-new">2026</span></td>
+        <td class="w-tipo"><span class="b t-com">Comunicación A</span></td>
+        <td class="w-fecha">27/08/2026<br><em>BO: 01/09/2026 · LISOL 1-1152, RUNOR 1-1968, SINAP 1-252</em><br><em>Puntos 1 a 4: 01/12/2026</em><br><em>PSPCP: cronograma desde 01/09/2026</em><br><em>Demás PSP: 01/01/2027</em></td>
+        <td class="w-to">TO "Lineamientos para la Gestión de Riesgos en las EF" (nuevo punto 6.5 y ajustes a 6.1.2, 6.2 y 6.3.2) y TO "Lineamientos para el Gobierno Societario en EF" (punto 4.2.1)</td>
+        <td class="w-tema">Crea un marco específico de <strong>gestión del riesgo de fraude</strong>. Incorpora el punto 6.5 (contenido en Anexo) y establece que el marco de riesgo operacional debe contemplar expresamente el fraude interno y externo, con estrategia, políticas y prácticas antifraude, estructura o responsable específico, y apetito y tolerancia al riesgo definidos. Exige reportar al Directorio sobre riesgo de fraude con periodicidad mínima trimestral, incluyendo indicadores clave, incidentes relevantes, medidas correctivas y nuevas metodologías de fraude detectadas. Suma el riesgo de fraude al alcance del comité de gestión de riesgos.<br><br><strong>PSPCP:</strong> deben cumplir la Sección 6 completa, de forma proporcional a su dimensión y perfil de riesgo, según un cronograma de cuatro etapas: marco, estructura y apetito (01/09/26–31/12/26); procesos y procedimientos sobre procesos críticos (01/01/27–31/05/27); autoevaluación integral e informe final (01/06/27–31/08/27); vigencia plena desde el 01/09/27. Deben informar a la SEFyC el cumplimiento de cada una de las dos primeras etapas y, al cerrar la tercera, presentar un informe final firmado por la máxima autoridad con informe especial de auditor externo.<br><br><strong>Demás PSP registrados (desde 01/01/2027):</strong> asignar la función de gestión del riesgo de fraude, realizar una autoevaluación, desarrollar un plan de mitigación y cumplir el punto 6.4 sobre riesgos de tecnología y seguridad de la información</td>
+        <td class="w-rel">Es la norma que convierte al fraude en un riesgo gestionado formalmente, con gobierno, métricas y responsable, y no solo en un conjunto de controles técnicos dispersos. Para los PSPCP implica montar una función antifraude auditable en poco más de un año, con certificación de auditor externo al cierre. Se articula con el TO de SFD (monitoreo transaccional), con el TO RRCI (ciberincidentes) y con el régimen sancionatorio de la A 8411</td>
+        <td class="w-suj"><span class="amb">EF + PSPCP + demás PSP registrados o autorizados por el BCRA</span></td>
+        <td class="w-niv"><span class="b n-tronc">Troncal</span></td>
+        <td class="w-est"><span class="b e-ver">Verificada</span> <span class="b e-pto">Pendiente de incorporación al TO</span><span class="ed-note">Contrastada contra el texto publicado en el Boletín Oficial del 01/09/2026. El Anexo con el texto del punto 6.5 no se publica en el BO y debe consultarse en el sitio del BCRA o en la Biblioteca Prebisch; las hojas de reemplazo de los TO están pendientes. El TO de Lineamientos publicado aún mantiene el punto 6.5 como "Transparencia"</span></td>
+        <td class="w-mod">Modifica el TO de Lineamientos para la Gestión de Riesgos (Sec. 6) y el TO de Gobierno Societario (4.2.1). Extiende la Sec. 6 completa a los PSPCP y obligaciones determinadas a los demás PSP</td>
+        <td class="w-link"><a class="lnk" href="https://www.boletinoficial.gob.ar/detalleAviso/primera/346743/20260901" target="_blank">BO ↗</a><br><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/texord/t-lingeef.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+<!-- ══════════════ TO REFERENCE ══════════════ -->
+<div class="to-section" id="tos">
+  <div class="hdr">
+    <h2>📚 Textos Ordenados (TO) — Links directos al PDF del BCRA</h2>
+    <p>Los TO son la herramienta de consulta más práctica, porque reúnen la redacción vigente de cada punto en un solo documento. La fuente de la obligación, sin embargo, sigue siendo la Comunicación: un TO puede quedar rezagado respecto de comunicaciones ya emitidas cuyas hojas de reemplazo aún no fueron circuladas. "Última verificada al 01/09/2026" indica la última comunicación incorporada identificada en esta revisión, leída en el encabezado del PDF oficial; conviene contrastar esa fecha con las comunicaciones posteriores.</p>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th scope="col" style="width:28px">Id</th>
+      <th scope="col" style="width:250px">Texto Ordenado</th>
+      <th scope="col" style="width:210px">Base / última verificada al 01/09/2026</th>
+      <th scope="col">Contenido clave en materia de seguridad/fraude</th>
+      <th scope="col" style="width:78px">Link TO</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>A</strong></td>
+        <td><strong>Req. mínimos para la gestión y control de los riesgos de TI y SI</strong></td>
+        <td>Base: A 7724 | Sec. 10 y sujetos: A 8398 | Última incorporada: A 8401 (TO al 13/02/2026)</td>
+        <td>Gobierno TI, gestión de riesgos, activos de información, continuidad del negocio (Sec. 6), infraestructura tecnológica (Sec. 7), ciberincidentes (Sec. 8), terceras partes (Sec. 10, versión 2026), IA, Shadow IT. Sujetos: EF + PSP registrados (plazo transitorio vencido el 04/08/2026, ya exigible) + IMF sistémicas INTERBANKING, COELSA, LINK y NEWPAY. Verificado el 01/09/2026: el TO descargable mantiene "Texto ordenado al 13/02/2026"</td>
+        <td><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-rmgcti.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td><strong>B</strong></td>
+        <td><strong>Req. mínimos riesgos TI/SI – Servicios Financieros Digitales</strong></td>
+        <td>Base: A 7783 (2023)</td>
+        <td>Gestión de riesgos en SFD, autenticación, onboarding digital no presencial, cifrado, agenda de cuentas, detección y monitoreo transaccional, dispositivos y apps. Sujetos: EF + PSP</td>
+        <td><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-rmrtsd.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td><strong>C</strong></td>
+        <td><strong>Lineamientos RRCI (Respuesta y Recuperación ante Ciberincidentes)</strong></td>
+        <td>Base: A 7266 (2021) | Última incorporada: A 8280 (TO al 17/07/2025; vigencia 18/07/2025; PSP no PSPCP: 60 días hábiles)</td>
+        <td>Gobierno, planificación, detección, respuesta, recuperación, comunicación. Sec. 3 (A 8280): notificación obligatoria al BCRA — incidentes importantes y críticos: notificación inicial en la primera hora; reporte de cierre a los 5 días corridos de la resolución</td>
+        <td><a class="lnk" href="https://www.bcra.gob.ar/Pdfs/Texord/t-rrci.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td><strong>D</strong></td>
+        <td><strong>Proveedores de Servicios de Pago (SNP-PSP)</strong></td>
+        <td>Origen: A 6859 / Base PSPCP: A 6885 | Última incorporada: <strong>A 8454 (TO al 14/07/2026)</strong>, que consolida A 8411 y A 8432</td>
+        <td>Definición PSP/PSPCP/PSI, funciones, registro, billeteras, enrolamiento, fraude, régimen informativo y fondos de clientes. Incluye ya el punto 1.5 (incumplimientos y sanciones), la figura "PSPCP como Servicio" (1.4.1.1 y 4.5), la verificación de identidad (4.4) y la prohibición de operar con activos digitales no autorizados (4.6)</td>
+        <td><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-psp.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td><strong>E</strong></td>
+        <td><strong>Sistema Nacional de Pagos – Servicios de Pago</strong></td>
+        <td>Última comunicación incorporada: A 8303 (08/2025)</td>
+        <td>Pagos con transferencia, QR, identificación por alias, servicio de billetera digital (Sec. 5, según A 7919), aceptación, VQR (A 8206), interoperabilidad</td>
+        <td><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-spd.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td><strong>F</strong></td>
+        <td><strong>SNP – Transferencias – Normas Complementarias</strong></td>
+        <td>Incluye A 7463 | Última incorporada: A 8436 (TO al 14/05/2026, confirmado en el encabezado del TO descargable)</td>
+        <td>Funciones de esquemas de transferencias, prevención y gestión de fraude, consentimiento en enrolamiento, parámetros de seguridad configurables por el usuario, trazabilidad. La A 8406 introduce el Cobro con Transferencia (CCT), pendiente de incorporación al TO consolidado</td>
+        <td><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-tr-nc.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td><strong>G</strong></td>
+        <td><strong>Protección de los Usuarios de Servicios Financieros (PUSF)</strong></td>
+        <td>Base: A 5388 (2013) | Ampliaciones: A 7146, A 7593 | Última incorporada: A 8433 (TO al 06/05/2026)</td>
+        <td>Derechos básicos, atención y gestión de reclamos (incluido fraude), parámetros de uso configurables en billeteras, desvinculación ante sospecha de fraude, auditoría externa para PSP</td>
+        <td><a class="lnk" href="https://www.bcra.gob.ar/pdfs/texord/t-pusf.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td><strong>H</strong></td>
+        <td><strong>Informe de Contadores Públicos Independientes sobre el cumplimiento de las normas del BCRA por parte de los PSP</strong></td>
+        <td>Base: A 7972 (03/2024, régimen desde 31/03/2024) | Ajustes: A 8102 (09/2024)</td>
+        <td>Informe trimestral de auditor externo para PSPCP (con opinión PUSF en el trimestre cerrado al 31/12); informe anual sobre PUSF para PSI con billetera digital</td>
+        <td><a class="lnk" href="https://www.bcra.gob.ar/Pdfs/Texord/t-RI-ICPIPSP.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td><strong>I</strong></td>
+        <td><strong>Lineamientos para la Gestión de Riesgos en las EF</strong></td>
+        <td>Resiliencia Operacional (Sec. 12): A 8249 (06/2025) | Última incorporada: <strong>A 8463</strong> | A 8471 (riesgo de fraude, 08/2026): pendiente de incorporación</td>
+        <td>Riesgo operacional (Sec. 6), gestión de riesgos de TI/SI (6.4), resiliencia operacional (Sec. 12), 3 líneas de defensa. Sujetos: EF; la A 8471 extiende la Sec. 6 a los PSPCP y determinadas obligaciones a los demás PSP, según cronograma</td>
+        <td><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/texord/t-lingeef.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td><strong>J</strong></td>
+        <td><strong>Régimen Disciplinario a cargo del BCRA (Leyes 21.526 y 25.065) y tramitación de sumarios cambiarios</strong></td>
+        <td>Base: A 6167 (2017) | Ampliación de sujetos y catálogo: A 8411 (03/2026) | Última incorporada: <strong>A 8415 (TO al 27/03/2026)</strong></td>
+        <td>Catálogo de infracciones, niveles de gravedad y Unidades Sancionatorias. Sección 11: incumplimientos de control interno, auditoría interna y gestión de riesgos, y bloque específico de tecnología, seguridad de la información, ciberincidentes, continuidad, terceras partes y servicios financieros digitales. Sujetos del "Grupo A": EF, CEC, administradores de esquemas, PSP registrados e IMF sistémicas</td>
+        <td><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-rdbcra.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+      <tr>
+        <td><strong>K</strong></td>
+        <td><strong>Principios para las Infraestructuras del Mercado Financiero (PIMF)</strong></td>
+        <td>Última incorporada: <strong>A 8457 (TO al 21/07/2026)</strong>, vigencia 22/07/2026</td>
+        <td>Principios CPMI-IOSCO aplicables a las IMF: riesgo operacional, resiliencia y divulgación. Perímetro compartido con el TO TI/SI, que alcanza a las IMF sistémicas INTERBANKING, COELSA, LINK y NEWPAY</td>
+        <td><a class="lnk" href="https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-pimf.pdf" target="_blank">TO ↗</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+<!-- ══════════════ ANALYSIS ══════════════ -->
+<div class="summary" id="analisis">
+  <h2>📊 Análisis editorial: normas troncales, aplicabilidad y orden de estudio</h2>
+  <div class="card-grid">
+
+    <div class="card">
+      <h3>⭐ Normas troncales — leer primero (clasificación editorial)</h3>
+      <ol>
+        <li><strong>A 7724 + A 8398 / TO t-rmgcti.pdf</strong> — Marco base TI/SI (EF y PSP registrados; para PSP exigible desde el 04/08/2026)</li>
+        <li><strong>A 7783 / TO t-rmrtsd.pdf</strong> — Servicios financieros digitales (EF + PSP)</li>
+        <li><strong>A 7266 + A 8280 / TO t-rrci.pdf</strong> — RRCI ciberincidentes</li>
+        <li><strong>TO PUSF</strong> — Protección de usuarios <em>(marco relacionado; detalle normativo fuera del alcance de esta versión)</em></li>
+        <li><strong>A 6885 / TO t-snp-psp.pdf</strong> — Régimen PSPCP</li>
+        <li><strong>A 7462 + A 7463</strong> — Billeteras y fraude en transferencias</li>
+        <li><strong>A 8432</strong> — PSPCP como Servicio (2026)</li>
+        <li><strong>A 8471 / TO t-lingeef.pdf</strong> — Gestión del riesgo de fraude (EF y PSP, 2026)</li>
+      </ol>
+      <p class="note">El TO consolidado es el texto de trabajo recomendado, porque refleja la redacción vigente de cada punto. Pero no desplaza a la Comunicación: una comunicación posterior vigente rige aunque sus hojas todavía no hayan sido incorporadas al TO. Antes de auditar, descargar el TO vigente del sitio del BCRA <em>y</em> revisar las comunicaciones emitidas con posterioridad a la fecha de su último texto ordenado. En esta versión, A 8406 y A 8471 son ejemplos de ese desfasaje.</p>
+    </div>
+
+    <div class="card">
+      <h3>🆕 Novedades 2025–2026 (prioridad de análisis)</h3>
+      <ul>
+        <li><strong>A 8398 (02/2026):</strong> PSP incorporados como sujetos obligados del TO TI/SI; el plazo transitorio de 180 días venció el 04/08/2026 y la norma ya les es exigible. Sec. 10 de terceras partes reescrita</li>
+        <li><strong>A 8401 (02/2026):</strong> TO TI/SI consolidado: IA, Shadow IT, disposiciones transitorias</li>
+        <li><strong>A 8411 + A 8415 (03/2026):</strong> el Régimen Disciplinario incorpora a PSP e IMF sistémicas al "Grupo A" y tipifica incumplimientos de tecnología, seguridad de la información, ciberincidentes, continuidad, terceras partes y SFD</li>
+        <li><strong>A 8406 (03/2026):</strong> Cobro con Transferencia (CCT), obligatorio desde el 31/08/2026: consentimiento oAuth2, sin reversas y responsabilidad ante el fraude en el cliente ordenante</li>
+        <li><strong>A 8454 (07/2026):</strong> nueva versión consolidada del TO PSP, que ya incorpora la A 8432</li>
+        <li><strong>A 8280 (07/2025):</strong> notificación de ciberincidentes al BCRA — importantes y críticos: notificación inicial en la primera hora; cierre a los 5 días corridos. Alcance: todos los PSP registrados</li>
+        <li><strong>A 8249 (06/2025):</strong> Resiliencia Operacional en el TO de Lineamientos de Gestión de Riesgos (EF) — vigente desde 01/09/2025</li>
+        <li><strong>A 8432 (04/2026):</strong> PSPCP como Servicio; los sistemas de los tomadores deben ajustarse a la normativa BCRA aplicable</li>
+        <li><strong>A 8471 (08/2026):</strong> gestión del riesgo de fraude como marco formal (punto 6.5 del TO de Lineamientos). PSPCP: cronograma 01/09/2026 a 01/09/2027, con informes a la SEFyC y certificación de auditor externo al cierre. Demás PSP: desde el 01/01/2027</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🏛️ Aplican a Entidades Financieras (EF)</h3>
+      <ul>
+        <li><strong>TO TI/SI completo</strong> — vigente para EF desde 2023</li>
+        <li><strong>A 8249</strong> — Resiliencia Operacional (Sec. 12 del TO de Lineamientos)</li>
+        <li><strong>A 8471</strong> — Gestión del riesgo de fraude (puntos 1 a 4, vigencia 01/12/2026)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>💸 Aplican a PSP / PSPCP</h3>
+      <ul>
+        <li><strong>A 6885</strong> — Base del régimen PSPCP</li>
+        <li><strong>A 7328</strong> — Antifraude en billeteras: identidad, titularidad coincidente y autenticación fuerte</li>
+        <li><strong>A 7972 + A 8102</strong> — Informe CPI y régimen informativo</li>
+        <li><strong>A 8038</strong> — Fondos de clientes PSPCP</li>
+        <li><strong>A 8432 + A 8454</strong> — PSPCP como Servicio, ya consolidado en el TO PSP</li>
+        <li><strong>TO TI/SI</strong> — exigible a los PSP registrados desde el 04/08/2026 (A 8398)</li>
+        <li><strong>A 8411</strong> — régimen sancionatorio: los PSP integran el "Grupo A"</li>
+        <li><strong>A 8471</strong> — riesgo de fraude: PSPCP desde 01/09/2026 (cronograma) y demás PSP desde 01/01/2027</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🔄 Aplican a ambos (EF + PSP)</h3>
+      <ul>
+        <li><strong>TO SFD (A 7783)</strong> — EF + PSP</li>
+        <li><strong>TO RRCI (A 7266 + A 8280)</strong> — EF + todos los PSP + IMF sistémicas</li>
+        <li><strong>TO PUSF</strong> — EF, fiduciarios de fideicomisos financieros (LEF), operadores de cambio, emisoras no financieras de TC/compra, OPNFC, PSPCP y PSI, según corresponda</li>
+        <li><strong>A 7462, A 7463, A 7769, A 7919, A 8303</strong> — billeteras, QR, fraude en transferencias</li>
+        <li><strong>TO SNP-SP + TO SNP-TR-NC</strong> — sistema de pagos</li>
+      </ul>
+      <p class="note">IMF sistémicas (INTERBANKING, COELSA, LINK y PRISMA) alcanzadas por el TO general TI/SI según A 7783; A 8398 actualiza el listado reemplazando PRISMA por NEWPAY e incorpora a los PSP registrados.</p>
+    </div>
+
+    <div class="card">
+      <h3>📌 Aplicabilidad por servicio prestado</h3>
+      <ul>
+        <li><strong>Billetera digital:</strong> A 7328, A 7462, A 7463, A 7783, A 7919, TO PSP, TO SNP-SP</li>
+        <li><strong>Transferencias inmediatas:</strong> A 7463, TO SNP-TR-NC</li>
+        <li><strong>Cobros recurrentes / débito de cuotas (CCT):</strong> A 8406, TO SNP-TR-NC</li>
+        <li><strong>Onboarding digital:</strong> A 7783 (Sec. 3 TO SFD), A 7462, A 7363</li>
+        <li><strong>Monitoreo transaccional:</strong> A 7783 (Sec. 4 TO SFD), A 7463</li>
+        <li><strong>Continuidad / resiliencia:</strong> TO TI/SI Sec. 6, A 8249 (EF)</li>
+        <li><strong>Terceros tecnológicos:</strong> TO TI/SI Sec. 10 (versión A 8398)</li>
+        <li><strong>Ciberincidentes:</strong> TO RRCI (A 7266 + A 8280)</li>
+        <li><strong>PSPCP como Servicio:</strong> A 8432 (TO PSP, pto. 4.5)</li>
+        <li><strong>Gestión del riesgo de fraude:</strong> TO Lineamientos Sec. 6 y punto 6.5 (A 8471)</li>
+        <li><strong>Consecuencia sancionatoria:</strong> TO Régimen Disciplinario, Sec. 11 (A 8411 + A 8415)</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<div class="footer">
+  <strong>Fuentes:</strong> La matriz fue elaborada a partir de Textos Ordenados del BCRA, Comunicaciones oficiales, Boletín Oficial e Infoleg. Las referencias marcadas como pendientes deben verificarse directamente en el <a href="https://www.bcra.gob.ar/buscador-de-comunicaciones/" target="_blank">buscador oficial del BCRA ↗</a> antes de su uso formal.
+  <br><strong>Criterio de inclusión:</strong> Incluye normas y Textos Ordenados vigentes o con efectos vigentes al momento de la revisión (01/09/2026). La vigencia debe verificarse al momento de uso. Las normas derogadas (A 4609, A 6354, A 6375, A 7370, A 7825, entre otras) fueron excluidas.
+  <br><strong>Sobre la interpretación:</strong> La columna "Relación con ciberseguridad / fraude" y las etiquetas de relevancia ("Troncal", "Relevante", "Complementaria", "Operativa") son clasificación e interpretación editorial, no denominaciones oficiales del BCRA.
+  <div class="legend">
+    <strong>Tipo de referencia:</strong>
+    <span class="b t-com">Comunicación A</span>
+    <span class="b t-to">Texto Ordenado / Circular de TO</span>
+    <span class="b t-sec">Sección de TO</span>
+    <span class="b t-comp">Norma complementaria</span>
+  </div>
+  <div class="legend">
+    <strong>Estado de validación:</strong>
+    <span class="b e-ver">Verificada</span>
+    <span class="b e-vera">Verificada con ajuste</span>
+    <span class="b e-pend">Pendiente de validación</span>
+    <span class="b e-pto">Pendiente de incorporación al TO</span>
+    <span class="b e-tovig">TO vigente</span>
+  </div>
+  <div class="legend">
+    <strong>Nivel de relevancia (editorial):</strong>
+    <span class="b n-tronc">Troncal</span>
+    <span class="b n-rel">Relevante</span>
+    <span class="b n-comp">Complementaria</span>
+    <span class="b n-oper">Operativa</span>
+  </div>
+  <div class="disclaimer">
+    ⚠️ <strong>Aviso:</strong> Esta matriz tiene fines informativos y de orientación profesional. No constituye asesoramiento legal, regulatorio ni una opinión formal de cumplimiento. La normativa del BCRA puede modificarse, complementarse o ser reemplazada con frecuencia; por lo tanto, antes de utilizar esta información en auditorías, informes regulatorios, procesos de cumplimiento o decisiones legales, se recomienda verificar cada Comunicación y Texto Ordenado directamente en el sitio oficial del BCRA y/o con asesoramiento especializado.
+  </div>
+</div>
+
+</body>
+</html>
